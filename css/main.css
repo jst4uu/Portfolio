@@ -3,20 +3,19 @@
   margin-right: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-padding-right: 0;
+  scroll-padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-  height: 200%;
-  max-width: 100%;
-}
-
-body {
+html, body {
+  overflow-x: hidden;
   min-height: 100vh;
+  background-repeat: no-repeat;
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   font-family: "Segoe UI", Arial, sans-serif;
+  scroll-behavior: smooth;
+  max-width: 100%;
+  height: auto;
 }
 
 .sparkle {
@@ -138,7 +137,6 @@ body {
     text-align: center;
   }
 }
-
 .about:hover {
   background-color: rgba(255, 255, 255, 0.599);
   transition: 0.5s;
@@ -240,3 +238,30 @@ body {
   font-weight: 500;
 }
 
+@media (max-width: 600px) {
+  .Skills {
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+  }
+  .about img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .Skills h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .start {
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+  }
+  .start h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+}

@@ -1,13 +1,13 @@
 // 💡 Posición inicial (centro)
 let targetX = window.innerWidth / 2;
-let targetY = window.innerHeight / 2;
+let targetY = window.scrollY +window.innerHeight / 2;
 let currentX = targetX;
 let currentY = targetY;
 
 // 💫 Al mover el mouse, actualiza el objetivo
 document.addEventListener("mousemove", (event) => {
   targetX = event.clientX;
-  targetY = event.clientY;
+  targetY = event.clientY + window.scrollY; // Ajustar Y para scroll
 });
 
 // 🎥 Animación suave de la luz siguiendo al cursor
@@ -31,7 +31,7 @@ const sparkleCount = 200;
 for (let i = 0; i < sparkleCount; i++) {
   const sparkle = document.createElement("span");
   sparkle.classList.add("sparkle");
-  sparkle.style.top = `${Math.random() * 199}vh`;
+  sparkle.style.top = `${Math.random() * document.body.scrollHeight}px`;
   sparkle.style.left = `${Math.random() * 99}vw`;
 
   // Duración más larga para que destelle muy suave
