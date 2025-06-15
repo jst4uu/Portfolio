@@ -1,0 +1,52 @@
+/* Barra de navegación */
+nav {
+    background-color: transparent;
+    transition: background 0.4s, box-shadow 0.4s, backdrop-filter 0.4s;
+    color: white;
+    padding: 0.7em 2vw;
+    border-radius: 100px;
+    border: none;
+    position: fixed;
+    top: 2vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    min-width: 240px;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+nav.scrolled {
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    color: rgb(62, 62, 62);
+    text-decoration: none;
+    margin: 0 1.5vw;
+    font-size: 1.1rem;
+    transition: color 0.3s, background 0.5s, padding 0.5s;
+    display: inline-block;
+    padding: 0.7em 1.2em;
+    border-radius: 100px;
+}
+
+nav a:hover {
+    background-color: rgba(78, 78, 78, 0.5);
+    color: white;
+    border-radius: 100px;
+    padding: 0.7em 2em;
+}
+
+nav a.active {
+    background-color: rgba(78, 78, 78, 0.5);
+    color: white;
+    border-radius: 100px;
+    padding: 0.4em 1.3em;
+}

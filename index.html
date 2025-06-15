@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+
+    <div id="navbar"></div>
+    <script>
+      fetch("nav.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+
+    <section id="top">
+      <div class="container">
+        <h1>Hi! I'm Said</h1>
+        <p>
+          Welcome to my portfolio!!
+          Explore my projects and learn more about me.
+        </p>
+      </div>
+    </section>
+
+    <div class="about">
+      <section id="about">
+        <h1>Who am I?</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, deserunt debitis, omnis at, mollitia optio reprehenderit ut quasi odit praesentium fugit ipsa adipisci soluta distinctio suscipit natus ratione odio corrupti?
+          In rem eaque magnam eveniet accusamus provident culpa, saepe, laudantium ut quisquam consectetur! Incidunt doloremque esse quas. Voluptate blanditiis praesentium in! Tenetur, dicta. Dolor eaque nisi numquam, quibusdam nihil quisquam!
+          Neque illum error nam, deleniti dolore sed placeat rerum excepturi, tenetur ipsam, minima sapiente iure consectetur soluta. Corporis mollitia totam illo ratione illum, maiores esse aspernatur perspiciatis, porro, culpa consequuntur?
+        </p>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
