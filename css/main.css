@@ -74,7 +74,7 @@ body {
         max-width: unset;
         padding: 0.5em 2vw;
         top: 1vw;
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.3em;
     }
     nav a {
