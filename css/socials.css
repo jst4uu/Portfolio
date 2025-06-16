@@ -25,6 +25,7 @@ html, body {
   font-size: 5em;
   margin-bottom: 20px;
   color: rgba(244, 244, 244, 0.5);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -36,19 +37,20 @@ img {
 
 .instagramSection {
     background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 1em;
     margin-top: 2em;
     margin-left: 15em;
     margin-right: 57em;
     display: flex;
-    transition: 0.5s ease;
+    transition: 0.5s ease-in-out;
     size: 1em;
     cursor: pointer
 }
 
 .instagramImg {
-    margin: 2em;
+    margin: 1em;
 }
 
 .instagramSection p {
@@ -65,6 +67,43 @@ img {
 .instagramSection:hover {
     background-color: rgba(255, 255, 255, 0.711);
     padding: 1em;
-    transition: 0.5s ease-in-out;
+    transition: 0.5s ease;
 }
 
+/* Discord Section */
+
+.discordSection {
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    margin-left: 57em;
+    margin-right: 15em;
+    display: flex;
+    transition: 0.5s ease-in-out;
+    size: 1em;
+    cursor: pointer
+}
+
+.discordImg {
+    margin: 1em;
+    width: 8em;
+    height: auto;
+}
+
+.discordSection p {
+    margin-top: 0.4em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.discordSection:hover {
+    background-color: rgba(255, 255, 255, 0.711);
+    padding: 1em;
+    transition: 0.5s ease;
+}
