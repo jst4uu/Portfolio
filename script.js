@@ -29,10 +29,3 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
-document.getElementById("link-about").addEventListener("click", function(event) {
-  if(window.location.pathname.endsWith("index.html")) {
-    event.preventDefault();
-    document.getElementById("about").scrollIntoView({behavior: "smooth"});
-  }
-});

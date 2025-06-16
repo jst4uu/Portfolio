@@ -6,7 +6,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/background.css" />
-    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/socials.css" />
   </head>
   <body>
     <div id="navbar"></div>
@@ -61,11 +62,12 @@
         </p>
       </section>
     </div>
-    
-    <div id="projects">
+
+    <div>
+      <section id="projects">
       <div class="header">
-      <h1>Projects</h1>
-    </div>
+        <h1>Projects</h1>
+      </div>
       <section class="nebulosity">
         <div class="img">
           <img src="imgs/image.png" alt="nebulosity" />
@@ -73,18 +75,39 @@
         <div class="card-info">
           <h1>Nebulosity (discontinued)</h1>
           <p>
-            This was my first project, a multi-functional discord bot, I started making it in 2022 and his first name was "WhiteBot", then one of my friends suggested rename it to "Nebulosity", I made a lot of features like: moderations, fun commands, dinamic commands, and more. It was a great experience because I learned how hard is to make a programming project. The number of users was around 60k in like +50 servers. It was discontinued because I didn't have a host for it and I didn't have the resources to keep it online. I started love programming since this project.
+            This was my first project, a multi-functional discord bot, I started
+            making it in 2022 and his first name was "WhiteBot", then one of my
+            friends suggested rename it to "Nebulosity", I made a lot of
+            features like: moderations, fun commands, dinamic commands, and
+            more. It was a great experience because I learned how hard is to
+            make a programming project. The number of users was around 60k in
+            like +50 servers. It was discontinued because I didn't have a host
+            for it and I didn't have the resources to keep it online. I started
+            love programming since this project.
           </p>
         </div>
       </section>
+    </section>
     </div>
 
-    <div id="socials">
-      
+    <div>
+      <section id="socials">
+      <div class="socialHeader">
+        <h1>Socials</h1>
+      </div>
+
+      <div class="instagram" onclick="window.open('https://www.instagram.com/saidomg_', '_blank')">
+        <section class="instagramSection">
+          <img class="instagramImg" src="imgs/instagram.png" alt="instagram" />
+          <p>Follow me!</p>
+        </section>
+      </div>
+    </section>
     </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
 
     <script src="script.js"></script>
-
     <script>
       // 💡 Posición inicial (centro)
       let targetX = window.innerWidth / 2;
@@ -127,5 +150,9 @@
         document.body.appendChild(sparkle);
       }
     </script>
+    <script
+      src="https://kit.fontawesome.com/e86213c030.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
