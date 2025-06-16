@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/projects.css">
   </head>
   <body>
-
     <div id="navbar"></div>
     <script>
       fetch("nav.html")
@@ -22,8 +22,7 @@
       <div class="container">
         <h1>Hi! I'm Said</h1>
         <p>
-          Welcome to my portfolio!!
-          Explore my projects and learn more about me.
+          Welcome to my portfolio!! Explore my projects and learn more about me.
         </p>
       </div>
     </section>
@@ -32,7 +31,9 @@
       <section id="about">
         <h1>Who am I?</h1>
         <p>
-          I'm a passionate web developer focused on front-end technologies, I love making beautiful and functional minimalistic and modern websites and maybe applications.
+          I'm a passionate web developer focused on front-end technologies, I
+          love making beautiful and functional minimalistic and modern websites
+          and maybe applications.
         </p>
       </section>
     </div>
@@ -41,7 +42,8 @@
       <section>
         <h1>What skills do i have?</h1>
         <p>
-          I have some me experience with HTML, CSS and JavaScript, currently learning Front-end.
+          I have some me experience with HTML, CSS and JavaScript, currently
+          learning Front-end.
         </p>
       </section>
     </div>
@@ -50,21 +52,80 @@
       <section>
         <h1>How did I started?</h1>
         <p>
-          I started my programming journey in 2022, I made my first project in JavaScript who was a discord bot multi-functional (currently discontinued), then I started learning some about Java, I tried to make a game in Unity but I didn't have the patience for it, so I started learning web development, I loved it. This is my first serious web, I hope you like it!
+          I started my programming journey in 2022, I made my first project in
+          JavaScript who was a discord bot multi-functional (currently
+          discontinued), then I started learning some about Java, I tried to
+          make a game in Unity but I didn't have the patience for it, so I
+          started learning web development, I loved it. This is my first serious
+          web, I hope you like it!
         </p>
       </section>
     </div>
-
-    <div class="projectsLink"> 
-    <h2>
-      <p>Want to see my projects?</p> <br>
-      <a href="projects.html">Click here!!</a>
-    </h2>
+    
+    <div id="projects">
+      <div class="header">
+      <h1>Projects</h1>
+    </div>
+      <section class="nebulosity">
+        <div class="img">
+          <img src="imgs/image.png" alt="nebulosity" />
+        </div>
+        <div class="card-info">
+          <h1>Nebulosity (discontinued)</h1>
+          <p>
+            This was my first project, a multi-functional discord bot, I started making it in 2022 and his first name was "WhiteBot", then one of my friends suggested rename it to "Nebulosity", I made a lot of features like: moderations, fun commands, dinamic commands, and more. It was a great experience because I learned how hard is to make a programming project. The number of users was around 60k in like +50 servers. It was discontinued because I didn't have a host for it and I didn't have the resources to keep it online. I started love programming since this project.
+          </p>
+        </div>
+      </section>
     </div>
 
-    <br>
+    <div id="socials">
+      
+    </div>
 
     <script src="script.js"></script>
-    <script src="background.js"></script>
+
+    <script>
+      // 💡 Posición inicial (centro)
+      let targetX = window.innerWidth / 2;
+      let targetY = window.scrollY + window.innerHeight / 2;
+      let currentX = targetX;
+      let currentY = targetY;
+
+      // 💫 Al mover el mouse, actualiza el objetivo
+      document.addEventListener("mousemove", (event) => {
+        targetX = event.clientX;
+        targetY = event.clientY + window.scrollY; // Ajustar Y para scroll
+      });
+
+      // 🎥 Animación suave de la luz siguiendo al cursor
+      function animateGlow() {
+        // Interpolación suave (lerp)
+        currentX += (targetX - currentX) * 0.2;
+        currentY += (targetY - currentY) * 0.2;
+
+        document.body.style.background = `
+    radial-gradient(circle at ${currentX}px ${currentY}px, rgba(76, 240, 255, 0.4), transparent 100%),
+    #000a1f
+  `;
+
+        requestAnimationFrame(animateGlow);
+      }
+      animateGlow();
+
+      // ✨ Crear destellos al cargar (como antes), con animación más suave
+      const sparkleCount = 200;
+
+      for (let i = 0; i < sparkleCount; i++) {
+        const sparkle = document.createElement("span");
+        sparkle.classList.add("sparkle");
+        sparkle.style.top = `${Math.random() * document.body.scrollHeight}px`;
+        sparkle.style.left = `${Math.random() * 99}vw`;
+
+        // Duración más larga para que destelle muy suave
+        sparkle.style.animationDuration = `${5 + Math.random() * 3}s`; // entre 5 y 10 segundos
+        document.body.appendChild(sparkle);
+      }
+    </script>
   </body>
 </html>
