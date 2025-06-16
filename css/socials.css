@@ -107,3 +107,22 @@ img {
     padding: 1em;
     transition: 0.5s ease;
 }
+
+@media (max-width: 768px) {
+    .instagramSection, .discordSection {
+        flex-direction: column;
+        align-items: center;
+        margin: 1em;
+    }
+
+    .instagramImg, .discordImg {
+        width: 100%;
+        max-width: 225px;
+    }
+
+    .instagramSection p, .discordSection p {
+        font-size: 1.2em;
+        text-align: center;
+        padding: 1em;
+    }
+}
