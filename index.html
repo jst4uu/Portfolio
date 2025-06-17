@@ -41,7 +41,7 @@
 
     <div class="Skills">
       <section>
-        <h1>What skills do i have?</h1>
+        <h1>What skills do I have?</h1>
         <p>
           I have some me experience with HTML, CSS and JavaScript, currently
           learning Front-end.
@@ -51,12 +51,12 @@
 
     <div class="start">
       <section>
-        <h1>How did I started?</h1>
+        <h1>How did I start?</h1>
         <p>
           I started my programming journey in 2022, I made my first project in
           JavaScript who was a discord bot multi-functional (currently
           discontinued), then I started learning some about Java, I tried to
-          make a game in Unity but I didn't have the patience for it, so I
+          make a game in Unity but, I didn't have the patience for it, so I
           started learning web development, I loved it. This is my first serious
           web, I hope you like it!
         </p>
@@ -68,7 +68,7 @@
       <div class="header">
         <h1>Projects</h1>
       </div>
-      <section class="nebulosity", id="projects">
+      <section class="nebulosity">
         <div class="img">
           <img src="imgs/image.png" alt="nebulosity" />
         </div>
@@ -78,7 +78,7 @@
             This was my first project, a multi-functional discord bot, I started
             making it in 2022 and his first name was "WhiteBot", then one of my
             friends suggested rename it to "Nebulosity", I made a lot of
-            features like: moderations, fun commands, dinamic commands, and
+            features like: moderation, fun commands, dynamic commands, and
             more. It was a great experience because I learned how hard is to
             make a programming project. The number of users was around 60k in
             like +50 servers. It was discontinued because I didn't have a host
@@ -122,21 +122,21 @@
 
     <script src="script.js"></script>
     <script>
-      // 💡 Posición inicial (centro)
+      // 💡 Initial position
       let targetX = window.innerWidth / 2;
       let targetY = window.scrollY + window.innerHeight / 2;
       let currentX = targetX;
       let currentY = targetY;
 
-      // 💫 Al mover el mouse, actualiza el objetivo
+      // 💫 As the mouse moves, update the target
       document.addEventListener("mousemove", (event) => {
         targetX = event.clientX;
-        targetY = event.clientY + window.scrollY; // Ajustar Y para scroll
+        targetY = event.clientY + window.scrollY; // Adjust Y for scroll
       });
 
-      // 🎥 Animación suave de la luz siguiendo al cursor
+      // 🎥 Smooth animation and smooth movement
       function animateGlow() {
-        // Interpolación suave (lerp)
+        // Smooth interpolation
         currentX += (targetX - currentX) * 0.2;
         currentY += (targetY - currentY) * 0.2;
 
@@ -149,7 +149,7 @@
       }
       animateGlow();
 
-      // ✨ Crear destellos al cargar (como antes), con animación más suave
+      // ✨ Create glows with smooth animation
       const sparkleCount = 200;
 
       for (let i = 0; i < sparkleCount; i++) {
@@ -158,14 +158,10 @@
         sparkle.style.top = `${Math.random() * document.body.scrollHeight}px`;
         sparkle.style.left = `${Math.random() * 99}vw`;
 
-        // Duración más larga para que destelle muy suave
-        sparkle.style.animationDuration = `${5 + Math.random() * 3}s`; // entre 5 y 10 segundos
+        // Longest duration
+        sparkle.style.animationDuration = `${5 + Math.random() * 3}s`; // between 5 y 10 seconds
         document.body.appendChild(sparkle);
       }
     </script>
-    <script
-      src="https://kit.fontawesome.com/e86213c030.js"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
