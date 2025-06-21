@@ -117,7 +117,7 @@ img {
 
     .instagramImg, .discordImg {
         width: 100%;
-        max-width: 225px;
+        max-width: 150px;
     }
 
     .instagramSection p, .discordSection p {
